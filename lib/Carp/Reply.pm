@@ -3,7 +3,7 @@ BEGIN {
   $Carp::Reply::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Carp::Reply::VERSION = '0.01';
+  $Carp::Reply::VERSION = '0.02';
 }
 use strict;
 use warnings;
@@ -42,7 +42,7 @@ Carp::Reply - get a repl on exceptions in your program
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 

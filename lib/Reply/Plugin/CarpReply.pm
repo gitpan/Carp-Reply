@@ -3,10 +3,11 @@ BEGIN {
   $Reply::Plugin::CarpReply::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Reply::Plugin::CarpReply::VERSION = '0.01';
+  $Reply::Plugin::CarpReply::VERSION = '0.02';
 }
 use strict;
 use warnings;
+# ABSTRACT: plugin that implements most of the functionality of Carp::Reply
 
 use base 'Reply::Plugin';
 
@@ -134,17 +135,20 @@ sub _frame {
     return $self->{stacktrace}->frame($self->{frame_index});
 }
 
+
+1;
+
 __END__
 
 =pod
 
 =head1 NAME
 
-Reply::Plugin::CarpReply
+Reply::Plugin::CarpReply - plugin that implements most of the functionality of Carp::Reply
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -174,8 +178,6 @@ plugin.
   command_list
   command_l
   command_env
-
-1;
 
 =head1 AUTHOR
 

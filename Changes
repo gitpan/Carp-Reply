@@ -1,4 +1,7 @@
 Revision history for Carp-Reply
 
+0.02  2013-06-12
+      - fix some mis-formatted pod which broke the trailing 1;
+
 0.01  2013-06-12
       - Initial release
