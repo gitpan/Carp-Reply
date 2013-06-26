@@ -3,7 +3,7 @@ BEGIN {
   $Reply::Plugin::CarpReply::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Reply::Plugin::CarpReply::VERSION = '0.02';
+  $Reply::Plugin::CarpReply::VERSION = '0.03';
 }
 use strict;
 use warnings;
@@ -31,6 +31,7 @@ sub compile {
     my ($next, $line, %opts) = @_;
 
     $opts{environment} = $self->_frame->lexicals;
+    $opts{package}     = $self->_frame->package;
 
     return $next->($line, %opts);
 }
@@ -148,7 +149,7 @@ Reply::Plugin::CarpReply - plugin that implements most of the functionality of C
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
