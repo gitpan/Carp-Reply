@@ -27,7 +27,7 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Carp-Reply
   homepage: http://metacpan.org/release/Carp-Reply
   repository: git://github.com/doy/carp-reply.git
-version: 0.03
+version: 0.04
 x_Dist_Zilla:
   perl:
     version: 5.018000
