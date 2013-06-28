@@ -17,7 +17,7 @@ meta-spec:
 name: Carp-Reply
 requires:
   Devel::StackTrace::WithLexicals: 0
-  Reply: 0.13
+  Reply: 0.18
   Reply::Config: 0
   Reply::Plugin: 0
   base: 0
@@ -27,7 +27,7 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Carp-Reply
   homepage: http://metacpan.org/release/Carp-Reply
   repository: git://github.com/doy/carp-reply.git
-version: 0.04
+version: 0.05
 x_Dist_Zilla:
   perl:
     version: 5.018000

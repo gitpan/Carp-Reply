@@ -29,7 +29,7 @@
       "runtime" : {
          "requires" : {
             "Devel::StackTrace::WithLexicals" : "0",
-            "Reply" : "0.13",
+            "Reply" : "0.18",
             "Reply::Config" : "0",
             "Reply::Plugin" : "0",
             "base" : "0",
@@ -58,7 +58,7 @@
          "web" : "https://github.com/doy/carp-reply"
       }
    },
-   "version" : "0.04",
+   "version" : "0.05",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.018000"

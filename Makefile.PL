@@ -21,7 +21,7 @@ my %WriteMakefileArgs = (
   "NAME" => "Carp::Reply",
   "PREREQ_PM" => {
     "Devel::StackTrace::WithLexicals" => 0,
-    "Reply" => "0.13",
+    "Reply" => "0.18",
     "Reply::Config" => 0,
     "Reply::Plugin" => 0,
     "base" => 0,
@@ -33,7 +33,7 @@ my %WriteMakefileArgs = (
     "File::Temp" => 0,
     "Test::More" => "0.88"
   },
-  "VERSION" => "0.04",
+  "VERSION" => "0.05",
   "test" => {
     "TESTS" => "t/*.t"
   }
