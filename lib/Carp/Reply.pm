@@ -3,13 +3,13 @@ BEGIN {
   $Carp::Reply::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Carp::Reply::VERSION = '0.05';
+  $Carp::Reply::VERSION = '0.06';
 }
 use strict;
 use warnings;
 # ABSTRACT: get a repl on exceptions in your program
 
-use Reply 0.18;
+use Reply 0.24;
 use Reply::Config;
 
 
@@ -42,7 +42,7 @@ Carp::Reply - get a repl on exceptions in your program
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -67,7 +67,10 @@ some commands to move around in the call stack.
 
 The package and lexical environment are set to the package and lexical
 environment of the current stack frame (and are updated when you use any of the
-commands which move around the stack frames).
+commands which move around the stack frames). The lexical variables are aliased
+to the variable in the stack frame, so if the repl is invoked manually (not
+through a C<__DIE__> handler), you can actually modify the contents of lexical
+variables to use when the repl closes and the app starts running again.
 
 You can start a repl at any given point in your program by inserting a call to
 C<Carp::Reply::repl> in your code. In addition, the default C<import> method

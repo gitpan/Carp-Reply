@@ -3,7 +3,7 @@ BEGIN {
   $Reply::Plugin::CarpReply::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Reply::Plugin::CarpReply::VERSION = '0.05';
+  $Reply::Plugin::CarpReply::VERSION = '0.06';
 }
 use strict;
 use warnings;
@@ -24,6 +24,17 @@ sub new {
     $self->_frame_index(0);
 
     return $self;
+}
+
+sub compile {
+    my $self = shift;
+    my ($next, $line, %args) = @_;
+
+    $self->_frame_index($self->{frame_index});
+
+    my ($code) = $next->($line, %args);
+
+    return $code;
 }
 
 sub command_backtrace {
@@ -114,14 +125,16 @@ sub _frame_index {
         print "You're already at the top frame.\n";
     }
     else {
-        $self->{frame_index} = $index;
-        printf "Now at %s:%s (frame $index)\n",
-            $self->_frame->filename,
-            $self->_frame->line;
+        if (!defined $self->{frame_index} || $self->{frame_index} != $index) {
+            $self->{frame_index} = $index;
+            printf "Now at %s:%s (frame $index)\n",
+                $self->_frame->filename,
+                $self->_frame->line;
+        }
 
         $self->publish(
             'lexical_environment',
-            default => $self->_frame->lexicals
+            $self->_frame->lexicals
         );
         $self->publish('package', $self->_frame->package);
     }
@@ -145,7 +158,7 @@ Reply::Plugin::CarpReply - plugin that implements most of the functionality of C
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
