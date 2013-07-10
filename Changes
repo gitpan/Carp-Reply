@@ -1,5 +1,8 @@
 Revision history for Carp-Reply
 
+0.07  2013-07-10
+      - update to work with new reply
+
 0.06  2013-07-04
       - update to work with new reply
       - modifications to existing lexical variables in a stack frame now

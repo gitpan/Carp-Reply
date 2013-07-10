@@ -17,17 +17,17 @@ meta-spec:
 name: Carp-Reply
 requires:
   Devel::StackTrace::WithLexicals: 0
-  Reply: 0.24
+  Reply: 0.27
   Reply::Config: 0
   Reply::Plugin: 0
   base: 0
   strict: 0
   warnings: 0
 resources:
-  bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Carp-Reply
+  bugtracker: https://github.com/doy/carp-reply/issues
   homepage: http://metacpan.org/release/Carp-Reply
   repository: git://github.com/doy/carp-reply.git
-version: 0.06
+version: 0.07
 x_Dist_Zilla:
   perl:
     version: 5.018000
@@ -171,14 +171,6 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: AutoPrereqs
-      version: 4.300034
-    -
-      class: Dist::Zilla::Plugin::Prereqs
-      config:
-        Dist::Zilla::Plugin::Prereqs:
-          phase: runtime
-          type: requires
-      name: Prereqs
       version: 4.300034
     -
       class: Dist::Zilla::Plugin::FinderCode

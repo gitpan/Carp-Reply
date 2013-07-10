@@ -3,13 +3,13 @@ BEGIN {
   $Carp::Reply::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Carp::Reply::VERSION = '0.06';
+  $Carp::Reply::VERSION = '0.07';
 }
 use strict;
 use warnings;
 # ABSTRACT: get a repl on exceptions in your program
 
-use Reply 0.24;
+use Reply 0.27;
 use Reply::Config;
 
 
@@ -42,7 +42,7 @@ Carp::Reply - get a repl on exceptions in your program
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
@@ -143,7 +143,7 @@ No known bugs.
 
 Please report any bugs through RT: email
 C<bug-carp-reply at rt.cpan.org>, or browse to
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Reply>.
+L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Carp-Reply>.
 
 =head1 SEE ALSO
 
