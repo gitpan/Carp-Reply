@@ -3,7 +3,7 @@ BEGIN {
   $Reply::Plugin::CarpReply::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Reply::Plugin::CarpReply::VERSION = '0.07';
+  $Reply::Plugin::CarpReply::VERSION = '0.08';
 }
 use strict;
 use warnings;
@@ -151,7 +151,7 @@ Reply::Plugin::CarpReply - plugin that implements most of the functionality of C
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
@@ -184,7 +184,7 @@ plugin.
 
 =head1 AUTHOR
 
-Jesse Luehrs <doy at cpan dot org>
+Jesse Luehrs <doy@tozt.net>
 
 =head1 COPYRIGHT AND LICENSE
 

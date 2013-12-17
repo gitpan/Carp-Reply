@@ -3,7 +3,7 @@ BEGIN {
   $Carp::Reply::AUTHORITY = 'cpan:DOY';
 }
 {
-  $Carp::Reply::VERSION = '0.07';
+  $Carp::Reply::VERSION = '0.08';
 }
 use strict;
 use warnings;
@@ -21,11 +21,12 @@ sub import {
 
 
 sub repl {
+    my ($quiet) = @_;
     my $repl = Reply->new(
         config  => Reply::Config->new,
         plugins => ['CarpReply']
     );
-    $repl->step('#bt');
+    $repl->step('#bt') unless $quiet;
     $repl->run;
 }
 
@@ -42,7 +43,7 @@ Carp::Reply - get a repl on exceptions in your program
 
 =head1 VERSION
 
-version 0.07
+version 0.08
 
 =head1 SYNOPSIS
 
@@ -141,9 +142,8 @@ Displays the current lexical environment.
 
 No known bugs.
 
-Please report any bugs through RT: email
-C<bug-carp-reply at rt.cpan.org>, or browse to
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Carp-Reply>.
+Please report any bugs to GitHub Issues at
+L<https://github.com/doy/carp-reply/issues>.
 
 =head1 SEE ALSO
 
@@ -163,13 +163,13 @@ You can also look for information at:
 
 L<https://metacpan.org/release/Carp-Reply>
 
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Carp-Reply>
-
 =item * Github
 
 L<https://github.com/doy/carp-reply>
+
+=item * RT: CPAN's request tracker
+
+L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Carp-Reply>
 
 =item * CPAN Ratings
 
@@ -179,7 +179,7 @@ L<http://cpanratings.perl.org/d/Carp-Reply>
 
 =head1 AUTHOR
 
-Jesse Luehrs <doy at cpan dot org>
+Jesse Luehrs <doy@tozt.net>
 
 =head1 COPYRIGHT AND LICENSE
 
